@@ -1,0 +1,9 @@
+<library path="openarmx_hand_hardware">
+  <class name="openarmx_hand_hardware/OpenArmXO6System"
+         type="openarmx_hand_hardware::OpenArmXO6System"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Combined OpenArmX V10 arm and LinkerHand O6 ros2_control system.
+    </description>
+  </class>
+</library>
