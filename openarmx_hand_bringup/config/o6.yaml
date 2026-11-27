@@ -1,0 +1,17 @@
+o6:
+  left:
+    can: can3
+    can_id: 40
+  right:
+    can: can2
+    can_id: 39
+  driver:
+    transport: can
+    publish_rate: 100.0
+    info_rate: 1.0
+    poll_touch: false
+    poll_matrix_touch: false
+    poll_diagnostics: true
+    poll_device_info: true
+  mapper:
+    publish_rate: 50.0

@@ -1,0 +1,86 @@
+/**:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    left_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    right_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    left_forward_position_controller:
+      type: forward_command_controller/ForwardCommandController
+    right_forward_position_controller:
+      type: forward_command_controller/ForwardCommandController
+    left_forward_effort_controller:
+      type: forward_command_controller/ForwardCommandController
+    right_forward_effort_controller:
+      type: forward_command_controller/ForwardCommandController
+    left_o6_position_controller:
+      type: forward_command_controller/ForwardCommandController
+    right_o6_position_controller:
+      type: forward_command_controller/ForwardCommandController
+
+/**/left_joint_trajectory_controller:
+  ros__parameters:
+    joints: [openarmx_left_joint1, openarmx_left_joint2, openarmx_left_joint3,
+      openarmx_left_joint4, openarmx_left_joint5, openarmx_left_joint6,
+      openarmx_left_joint7]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    state_publish_rate: 100.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+
+/**/right_joint_trajectory_controller:
+  ros__parameters:
+    joints: [openarmx_right_joint1, openarmx_right_joint2, openarmx_right_joint3,
+      openarmx_right_joint4, openarmx_right_joint5, openarmx_right_joint6,
+      openarmx_right_joint7]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    state_publish_rate: 100.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+
+/**/left_forward_position_controller:
+  ros__parameters:
+    joints: [openarmx_left_joint1, openarmx_left_joint2, openarmx_left_joint3,
+      openarmx_left_joint4, openarmx_left_joint5, openarmx_left_joint6,
+      openarmx_left_joint7]
+    interface_name: position
+
+/**/right_forward_position_controller:
+  ros__parameters:
+    joints: [openarmx_right_joint1, openarmx_right_joint2, openarmx_right_joint3,
+      openarmx_right_joint4, openarmx_right_joint5, openarmx_right_joint6,
+      openarmx_right_joint7]
+    interface_name: position
+
+/**/left_forward_effort_controller:
+  ros__parameters:
+    joints: [openarmx_left_joint1, openarmx_left_joint2, openarmx_left_joint3,
+      openarmx_left_joint4, openarmx_left_joint5, openarmx_left_joint6,
+      openarmx_left_joint7]
+    interface_name: effort
+
+/**/right_forward_effort_controller:
+  ros__parameters:
+    joints: [openarmx_right_joint1, openarmx_right_joint2, openarmx_right_joint3,
+      openarmx_right_joint4, openarmx_right_joint5, openarmx_right_joint6,
+      openarmx_right_joint7]
+    interface_name: effort
+
+/**/left_o6_position_controller:
+  ros__parameters:
+    joints: [left_lh_thumb_cmc_pitch, left_lh_thumb_cmc_yaw,
+      left_lh_index_mcp_pitch, left_lh_middle_mcp_pitch,
+      left_lh_ring_mcp_pitch, left_lh_pinky_mcp_pitch]
+    interface_name: position
+
+/**/right_o6_position_controller:
+  ros__parameters:
+    joints: [right_rh_thumb_cmc_pitch, right_rh_thumb_cmc_yaw,
+      right_rh_index_mcp_pitch, right_rh_middle_mcp_pitch,
+      right_rh_ring_mcp_pitch, right_rh_pinky_mcp_pitch]
+    interface_name: position
